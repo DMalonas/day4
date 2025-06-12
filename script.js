@@ -132,6 +132,27 @@
         });
       }.bind(this));
     };
+	
+	
+	Sun.prototype.updateColor = function() {
+	  if (!this.body) return;
+
+	  const colors = [0xffde79, 0xffa07a, 0xffcc00, 0xff8855, 0xffe066];
+	  let index = 0;
+
+	  setInterval(() => {
+		index = (index + 1) % colors.length;
+		this.body.material.color.setHex(colors[index]);
+
+		// Also update rays
+		this.threegroup.children.forEach((child) => {
+		  if (child !== this.body && child.material) {
+			child.material.color.setHex(colors[index]);
+		  }
+		});
+	  }, 10000); // every 10 seconds
+	};
+	
 
     // INIT THREE JS, SCREEN AND MOUSE EVENTS
     function init() {
@@ -534,6 +555,7 @@
       // Create sun
       sun = new Sun();
       scene.add(sun.threegroup);
+	  sun.updateColor();
     }
 
     // MAIN LOOP
