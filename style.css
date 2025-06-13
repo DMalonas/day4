@@ -71,6 +71,21 @@
       opacity: 1;
     }
 
+      #feature-olga{
+    position: absolute;
+    top: 20px;       /* Changed from bottom */
+    left: 20px;      /* Changed from right */
+    color: #b75505;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(224, 218, 205, 0.8);
+    padding: 8px 15px;
+    border-radius: 5px;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.9;
+
+      }
     #panatha-banner {
       position: absolute;
       top: 10px;
