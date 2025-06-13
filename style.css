@@ -1,55 +1,182 @@
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
-    
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: #e0dacd;
-      font-family: 'Open Sans', sans-serif;
-    }
-    
-    #world {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    
-    
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-    #sun-info {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      color: #b75505;
-      font-size: 14px;
-      background: rgba(224, 218, 205, 0.8);
-      padding: 10px;
-      border-radius: 5px;
-      pointer-events: none;
-      z-index: 10;
-    }
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
+    font-family: 'Rajdhani', sans-serif;
+    cursor: crosshair;
+}
+
+#world {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ui-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#click-counter {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(10px);
+    border: 2px solid #ff4444;
+    border-radius: 12px;
+    padding: 15px 20px;
+    color: #ff6666;
+    font-weight: 700;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 32px rgba(255, 68, 68, 0.3);
+    pointer-events: auto; /* Allow interaction with counter if needed */
+}
+
+#click-counter.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.counter-label {
+    color: #cc4444;
+    margin-right: 8px;
+}
+
+.counter-value {
+    color: #ff6666;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.instructions {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 300px;
+    pointer-events: auto; /* Allow interaction with instructions if needed */
+}
+
+.instructions p {
+    margin-bottom: 8px;
+}
+
+.instructions p:last-child {
+    margin-bottom: 0;
+    color: #ff8866;
+    font-weight: 600;
+}
+
+/* Animated Name Styles */
+#animated-name-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 200;
+}
+
+#graffiti-name {
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(30px, 8vw, 100px);
+    color: #ff8866; /* Slightly different shade for emphasis */
+    text-shadow:
+        2px 2px 0px #2c1810, /* Darker outline closer to background */
+        4px 4px 0px rgba(0,0,0,0.4); /* Softer shadow */
+    text-align: center;
+}
+
+#graffiti-name span {
+    display: inline-block;
+    opacity: 0;
+    transform-origin: center center;
+    position: relative; /* For fine-tuning character spacing if needed */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
     #click-counter {
-      position: absolute;
-      top: 50px;
-      left: 20px;
-<<<<<<< HEAD
-      color: #f15535;
-=======
-      color: #ff5515;
->>>>>>> other_branch
-      font-weight: bold;
-      font-size: 18px;
-      background: rgba(224, 218, 205, 0.8);
-      padding: 5px 10px;
-      border-radius: 5px;
-      pointer-events: none;
-      z-index: 10;
-      opacity: 0;
-      transition: opacity 0.3s;
+        top: 20px;
+        left: 20px;
+        padding: 12px 16px;
+        font-size: 16px;
     }
-    
-    #click-counter.show {
-      opacity: 1;
+
+    .counter-value {
+        font-size: 20px;
     }
+
+    .instructions {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        max-width: none;
+        font-size: 13px;
+        padding: 16px;
+    }
+
+    #graffiti-name {
+       font-size: clamp(24px, 10vw, 80px); /* Adjust for smaller screens */
+    }
+}
+
+/* Loading indicator */
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff6666;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1000;
+}
+
+/* Custom scrollbar for potential future use */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
