@@ -71,6 +71,13 @@
       opacity: 1;
     }
 
+    #world h3{
+      position: absolute;
+      color: rgb(36, 72, 1);
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
       #feature-olga{
     position: absolute;
     top: 20px;       /* Changed from bottom */
