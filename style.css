@@ -49,3 +49,7 @@
     #click-counter.show {
       opacity: 1;
     }
+
+    #name-tag {
+      text-align: center;
+    }

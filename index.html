@@ -6,13 +6,44 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+.graffiti-text {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Permanent Marker', cursive;
+  color: #fff;
+  font-size: 4em; /* μεγαλύτερο μέγεθος */
+  text-shadow: 2px 2px 5px #00f0ff, -2px -2px 5px #ff9100;
+  max-width: 700px;
+  padding: 30px;
+  text-align: center;
+  background: 
+    url('https://www.transparenttextures.com/patterns/asfalt-light.png'),
+    radial-gradient(circle at top left, #ff3cac, #784ba0, #2b86c5);
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(255, 60, 172, 0.6), 0 0 15px rgba(0, 240, 255, 0.4);
+  z-index: 9999;
+}
+  </style>
 </head>
 <body>
+  <p>here come the sun</p>
   <div id="world"></div>
   <div id="click-counter" placeholder = "John">0</div>
+  <div id="world">
+    <img  src="./bourikachupng.png" alt="graffiti" style="text-align: center;"/>
   </div>
+  <div id="click-counter">0</div>
+  <h2 id="name-tag">Maria Theodoropoulou</h2>
+  </div>
+    <div class="graffiti-text"> GFOV</div>
+  <p>ARISTOTELIS CHANGEEEEEEEEEEEEEEEE</p>
+  <h1>HEY IM JOHN POULOS</h1>
   <script src="script.js"></script>
   <div id="full-name" style="display: none;">Γιάννης Δρογκάρης</div>
-
+  <p>IroT</p>
 </body>
 </html>
