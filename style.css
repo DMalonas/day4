@@ -29,11 +29,33 @@
       z-index: 10;
     }
     
+
+    
+    .graffiti-text {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Permanent Marker', cursive;
+      color: #fff;
+      font-size: 4em; /* μεγαλύτερο μέγεθος */
+      text-shadow: 2px 2px 5px #00f0ff, -2px -2px 5px #ff9100;
+      max-width: 700px;
+      padding: 30px;
+      text-align: center;
+      background: 
+        url('https://www.transparenttextures.com/patterns/asfalt-light.png'),
+        radial-gradient(circle at top left, #ff3cac, #784ba0, #2b86c5);
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(255, 60, 172, 0.6), 0 0 15px rgba(0, 240, 255, 0.4);
+      z-index: 9999;
+    }
+
     #click-counter {
       position: absolute;
       top: 50px;
       left: 20px;
-      color: #1cad0c;
+      color: #ff5515;
       font-weight: bold;
       font-size: 18px;
       background: rgba(92, 67, 13, 0.8);
