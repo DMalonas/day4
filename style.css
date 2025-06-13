@@ -15,8 +15,7 @@
       overflow: hidden;
     }
     
-    
-
+   
     #sun-info {
       position: absolute;
       top: 20px;
@@ -34,10 +33,10 @@
       position: absolute;
       top: 50px;
       left: 20px;
-      color: #f15535;
+      color: #1cad0c;
       font-weight: bold;
       font-size: 18px;
-      background: rgba(224, 218, 205, 0.8);
+      background: rgba(92, 67, 13, 0.8);
       padding: 5px 10px;
       border-radius: 5px;
       pointer-events: none;
@@ -48,6 +47,22 @@
     
     #click-counter.show {
       opacity: 1;
+    }
+
+    #panatha-banner {
+      position: absolute;
+      top: 10px;
+      width: 100vw;
+      text-align: center;
+      color: #11b04d;      /* Πράσινο ΠΑΟ */
+      font-size: 2.3em;
+      font-weight: bold;
+      letter-spacing: 6px;
+      text-shadow: 0 1px 8px #00000011;
+      z-index: 100;
+      font-family: 'Open Sans', sans-serif;
+      pointer-events: none;
+      user-select: none;
     }
 
 
