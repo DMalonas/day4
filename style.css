@@ -58,7 +58,7 @@
     }
 
     #tagia {
-      font-size: 24px; /* Adjust as needed */
+      font-size: 24px;
       font-weight: bold;
       animation: rgbAnimation 3s infinite alternate;
     }
