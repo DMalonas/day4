@@ -50,6 +50,19 @@
       opacity: 1;
     }
 
+
+    #name{
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #b75505;
+      font-size: 14px;
+      background: rgba(224, 205, 213, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      pointer-events: none;
+      z-index: 10;
+
     #name-tag {
       text-align: center;
     }
