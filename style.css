@@ -1,4 +1,7 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+    @import url('https://fonts.googleapis.com/css2?family=Nabla&family=Orbitron:wght@400..900&display=swap');
+    
+
     
     body {
       margin: 0;
@@ -51,14 +54,18 @@
     }
 
       @keyframes rgbAnimation {
-      0%   { color: red; }
-      33%  { color: green; }
+      0%   { color: rgb(255, 0, 0); }
+      25%  { color: rgb(255, 217, 0); }
+      33%  { color: rgb(0, 255, 0); }
+      45%  { color: rgb(0, 255, 234) }
       66%  { color: blue; }
-      100% { color: red; }
+      75%  { color: rgb(255, 0, 251); }
+      100% { color: rgb(255, 0, 212); }
     }
 
     #tagia {
-      font-size: 24px;
+      font-family: Orbitron;
+      font-size: 30px;
       font-weight: bold;
-      animation: rgbAnimation 3s infinite alternate;
+      animation: rgbAnimation .5s infinite alternate;
     }
