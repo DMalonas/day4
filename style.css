@@ -49,3 +49,11 @@
     #click-counter.show {
       opacity: 1;
     }
+
+    #world h3{
+      position: absolute;
+      color: rgb(36, 72, 1);
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
