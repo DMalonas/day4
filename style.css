@@ -1,51 +1,58 @@
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
-    
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: #e0dacd;
-      font-family: 'Open Sans', sans-serif;
-    }
-    
-    #world {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    
-    
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800");
 
-    #sun-info {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      color: #b75505;
-      font-size: 14px;
-      background: rgba(224, 218, 205, 0.8);
-      padding: 10px;
-      border-radius: 5px;
-      pointer-events: none;
-      z-index: 10;
-    }
-    
-    #click-counter {
-      position: absolute;
-      top: 50px;
-      left: 20px;
-      color: #f15535;
-      font-weight: bold;
-      font-size: 18px;
-      background: rgba(224, 218, 205, 0.8);
-      padding: 5px 10px;
-      border-radius: 5px;
-      pointer-events: none;
-      z-index: 10;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    
-    #click-counter.show {
-      opacity: 1;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #e0dacd;
+  font-family: "Open Sans", sans-serif;
+}
+
+#world {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  color: #56373c;
+}
+
+#sun-info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #b75505;
+  font-size: 14px;
+  background: rgba(224, 218, 205, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#click-counter {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  color: #f15535;
+  font-weight: bold;
+  font-size: 18px;
+  background: rgba(224, 218, 205, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#click-counter.show {
+  opacity: 1;
+}
