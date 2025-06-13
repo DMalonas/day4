@@ -244,6 +244,8 @@
       if (intersects.length > 0) {
         var currentTime = Date.now();
         var timeDiff = currentTime - lastClickTime;
+        document.getElementById('full-name').style.display = 'block';
+        
         
         // Reset counter if too much time passed between clicks
         if (timeDiff > 500) {
