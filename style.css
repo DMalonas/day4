@@ -49,3 +49,16 @@
     #click-counter.show {
       opacity: 1;
     }
+
+      @keyframes rgbAnimation {
+      0%   { color: red; }
+      33%  { color: green; }
+      66%  { color: blue; }
+      100% { color: red; }
+    }
+
+    #tagia {
+      font-size: 24px; /* Adjust as needed */
+      font-weight: bold;
+      animation: rgbAnimation 3s infinite alternate;
+    }
