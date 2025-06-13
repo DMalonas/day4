@@ -34,7 +34,11 @@
       position: absolute;
       top: 50px;
       left: 20px;
+<<<<<<< HEAD
       color: #f15535;
+=======
+      color: #ff5515;
+>>>>>>> other_branch
       font-weight: bold;
       font-size: 18px;
       background: rgba(224, 218, 205, 0.8);
