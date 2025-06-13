@@ -192,32 +192,6 @@
       
       // Add click event for sun
       renderer.domElement.addEventListener('click', handleClick, false);
-
-      addName("Zappas");
-    }
-
-
-    function addName(name){
-            // Load a font and create text mesh
-      var loader = new THREE.FontLoader();
-      loader.load('https://threejs.org/examples/fonts/helvetiker_bold.typeface.json', function(font) {
-        var textGeometry = new THREE.TextGeometry(name, {
-          font: font,
-          size: 100,
-          height: 10,
-          curveSegments: 12,
-          bevelEnabled: false
-        });
-
-        var textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
-        var textMesh = new THREE.Mesh(textGeometry, textMaterial);
-
-        // Position it far in the background
-        textMesh.position.set(300, 100, 100); // Adjust as needed
-        textMesh.rotation.y = 0;
-
-        scene.add(textMesh);
-      });
     }
 
     function onWindowResize() {
