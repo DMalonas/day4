@@ -1,3 +1,59 @@
+===== My Code: ======
+===== index.html =====
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title style="font-size: medium;">ΠΑΝΑΘΑ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+.graffiti-text {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Permanent Marker', cursive;
+  color: #fff;
+  font-size: 4em; /* μεγαλύτερο μέγεθος */
+  text-shadow: 2px 2px 5px #00f0ff, -2px -2px 5px #ff9100;
+  max-width: 700px;
+  padding: 30px;
+  text-align: center;
+  background: 
+    url('https://www.transparenttextures.com/patterns/asfalt-light.png'),
+    radial-gradient(circle at top left, #ff3cac, #784ba0, #2b86c5);
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(255, 60, 172, 0.6), 0 0 15px rgba(0, 240, 255, 0.4);
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+
+  <div id="world"></div>
+  <div id="click-counter">0</div>
+  <div id="panatha-banner">ΠΑΝΑΘΑ</div>
+
+  <div id="name">Maria S.</div>
+  <h2>Maria Theodoropoulou</h2>
+  </div>
+  <p>ARISTOTELIS CHANGEEEEEEEEEEEEEEEE</p>
+  <p>Fov :P</p>
+  <h1>HEY IM JOHN POULOS</h1>
+
+  <div class="graffiti-text"> GFOV</div>
+  <script src="script.js"></script>
+  <p>IroT</p>
+  <div>Γιάννης Δρογκάρης</div>
+
+</body>
+</html>
+
+
+===== script.js =====
     // THREEJS RELATED VARIABLES 
     var scene, 
         camera,
@@ -270,8 +326,6 @@
       if (intersects.length > 0) {
         var currentTime = Date.now();
         var timeDiff = currentTime - lastClickTime;
-        document.getElementById('full-name').style.display = 'block';
-        
         
         // Reset counter if too much time passed between clicks
         if (timeDiff > 500) {
@@ -655,3 +709,87 @@ function addGraffitiImage() {
 
     createBirdsAndSun();
     loop();
+
+
+===== style.css =====
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #e0dacd;
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    #world {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    
+
+    #sun-info {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #b75505;
+      font-size: 14px;
+      background: rgba(224, 218, 205, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    #click-counter {
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      color: #1cad0c;
+      font-weight: bold;
+      font-size: 18px;
+      background: rgba(92, 67, 13, 0.8);
+      padding: 5px 10px;
+      border-radius: 5px;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    #click-counter.show {
+      opacity: 1;
+    }
+
+    #name{
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #b75505;
+      font-size: 14px;
+      background: rgba(224, 205, 213, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+#panatha-banner {
+  position: absolute;
+  top: 10px;
+  width: 100vw;
+  text-align: center;
+  color: #11b04d;      /* Πράσινο ΠΑΟ */
+  font-size: 2.3em;
+  font-weight: bold;
+  letter-spacing: 6px;
+  text-shadow: 0 1px 8px #00000011;
+  z-index: 100;
+  font-family: 'Open Sans', sans-serif;
+  pointer-events: none;
+  user-select: none;
+}
+
