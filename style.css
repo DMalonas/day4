@@ -1,4 +1,7 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+    @import url('https://fonts.googleapis.com/css2?family=Nabla&family=Orbitron:wght@400..900&display=swap');
+    
+
     
     body {
       margin: 0;
@@ -15,8 +18,7 @@
       overflow: hidden;
     }
     
-    
-
+   
     #sun-info {
       position: absolute;
       top: 20px;
@@ -30,6 +32,28 @@
       z-index: 10;
     }
     
+
+    
+    .graffiti-text {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Permanent Marker', cursive;
+      color: #fff;
+      font-size: 4em; /* μεγαλύτερο μέγεθος */
+      text-shadow: 2px 2px 5px #00f0ff, -2px -2px 5px #ff9100;
+      max-width: 700px;
+      padding: 30px;
+      text-align: center;
+      background: 
+        url('https://www.transparenttextures.com/patterns/asfalt-light.png'),
+        radial-gradient(circle at top left, #ff3cac, #784ba0, #2b86c5);
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(255, 60, 172, 0.6), 0 0 15px rgba(0, 240, 255, 0.4);
+      z-index: 9999;
+    }
+
     #click-counter {
       position: absolute;
       top: 50px;
@@ -41,16 +65,16 @@
       padding: 5px 10px;
       border-radius: 5px;
       pointer-events: none;
-      z-index: 10;
       opacity: 0;
       transition: opacity 0.3s;
+      z-index: 9999;
     }
     
     #click-counter.show {
       opacity: 1;
     }
 
-    #name{
+ #name{
       position: absolute;
       top: 10px;
       right: 20px;

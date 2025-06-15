@@ -220,6 +220,32 @@
       });
     }
 
+
+      function addName(name) {
+      // Load a font and create text mesh
+      var loader = new THREE.FontLoader();
+      loader.load('https://threejs.org/examples/fonts/helvetiker_bold.typeface.json', function(font) {
+        var textGeometry = new THREE.TextGeometry(name, {
+          font: font,
+          size: 100,
+          height: 10,
+          curveSegments: 12,
+          bevelEnabled: false
+        });
+
+        var textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+        var textMesh = new THREE.Mesh(textGeometry, textMaterial);
+
+        // Position it far in the background
+        textMesh.position.set(-300, -100, -800); // Adjust as needed
+        textMesh.rotation.y = 0;
+
+        scene.add(textMesh);
+      });
+    }
+
+
+
     function onWindowResize() {
       HEIGHT = window.innerHeight;
       WIDTH = window.innerWidth;
@@ -270,6 +296,8 @@
       if (intersects.length > 0) {
         var currentTime = Date.now();
         var timeDiff = currentTime - lastClickTime;
+        document.getElementById('full-name').style.display = 'block';
+        
         
         // Reset counter if too much time passed between clicks
         if (timeDiff > 500) {
